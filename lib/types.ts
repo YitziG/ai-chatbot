@@ -33,9 +33,31 @@ export interface AuthResult {
   message: string
 }
 
-export interface User extends Record<string, any> {
+export interface AppUser extends Record<string, any> {
   id: string
   email: string
   password: string
   salt: string
+}
+
+export interface DoctorpediaUser {
+  id: string;
+  first_name: string;
+  last_name: string;
+  place_of_work: string;
+  title: { name: string };
+  area_practice: { name: string };
+  email: string;
+  avatar: string;
+}
+
+export interface DoctorpediaPatient {
+  id: string;
+  first_name: string;
+  last_name: string;
+  email: string;
+  phone: string;
+  number: number;
+  gender: string;
+  date_birthday: string | null;
 }
